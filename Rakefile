@@ -268,7 +268,13 @@ def install_prezto
   puts
   puts "Overriding prezto ~/.zpreztorc with YADR's zpreztorc to enable additional modules..."
   run %{ ln -nfs "$HOME/.yadr/zsh/prezto-override/zpreztorc" "${ZDOTDIR:-$HOME}/.zpreztorc" }
-
+  puts
+  puts "Overriding prezto ~/.zshenv with YADR's zshenv to add .nvm to $PATH"
+  run %{ ln -nfs "$HOME/.yadr/zsh/prezto-override/zshenv" "${ZDOTDIR:-$HOME}/.zshenv" }
+  puts
+  puts "Overriding prezto ~/.zprofile with YADR's zprofile"
+  run %{ ln -nfs "$HOME/.yadr/zsh/prezto-override/zprofile" "${ZDOTDIR:-$HOME}/.zprofile" }
+  
   puts
   puts "Creating directories for your customizations"
   run %{ mkdir -p $HOME/.zsh.before }
