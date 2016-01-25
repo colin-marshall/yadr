@@ -35,8 +35,11 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'fasd' \
   'git' \
+  'node' \
   'osx' \
   'ruby' \
+  'python' \
+  'rails' \
   'syntax-highlighting' \
   'history-substring-search' \
   'ssh' \
