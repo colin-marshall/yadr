@@ -128,3 +128,5 @@
 [user]
 	name = Colin Marshall
 	email = colin.michael.marshall@gmail.com
+[credential]
+	helper = osxkeychain
