@@ -207,9 +207,12 @@ alias dbmd='spring rake db:migrate:down'
 alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
-alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+alias brewu='brew update && brew upgrade --all && brew cleanup && brew prune && brew doctor'
 
 # Directories
 alias vwp='cd ~/Sites/vagrant-local'
 alias projects='cd ~/Projects'
 alias forks='cd ~/Projects/Forks'
+
+# Variables
+alias ep='echo $PATH | tr -s ":" "\n"'

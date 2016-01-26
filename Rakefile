@@ -18,7 +18,6 @@ task :install => [:submodule_init, :submodules] do
   install_files(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
   install_files(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
   install_files(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
-  install_files(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   install_files(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
   if want_to_install?('vim configuration (highly recommended)')
     install_files(Dir.glob('{vim,vimrc}'))
@@ -172,7 +171,7 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher}
+  run %{brew install zsh ctags git hub reattach-to-user-namespace the_silver_searcher}
   run %{brew install mongodb node tidy-html5 brew-cask vv php56 python flac sqlite composer ssh-copy-id tree}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   puts
@@ -274,6 +273,9 @@ def install_prezto
   puts
   puts "Overriding prezto ~/.zprofile with YADR's zprofile"
   run %{ ln -nfs "$HOME/.yadr/zsh/prezto-override/zprofile" "${ZDOTDIR:-$HOME}/.zprofile" }
+  puts
+  puts "Overriding prezto ~/.zlogin with YADR's zlogin"
+  run %{ ln -nfs "$HOME/.yadr/zsh/prezto-override/zlogin" "${ZDOTDIR:-$HOME}/.zlogin" }
   
   puts
   puts "Creating directories for your customizations"
