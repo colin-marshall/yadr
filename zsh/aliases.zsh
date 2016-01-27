@@ -117,6 +117,7 @@ alias gps='git push'
 alias gpsh='git push -u origin `git rev-parse --abbrev-ref HEAD`'
 alias gnb='git nb' # new branch aka checkout -b
 alias grs='git reset'
+alias grshead='git reset HEAD'
 alias grsh='git reset --hard'
 alias gcln='git clean'
 alias gclndf='git clean -df'
