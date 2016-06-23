@@ -102,6 +102,9 @@ alias glg='git l'
 alias glog='git l'
 alias co='git co'
 alias gf='git fetch'
+alias gfp='git fetch --prune'
+alias gfa='git fetch --all'
+alias gfap='git fetch --all --prune'
 alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
@@ -117,7 +120,6 @@ alias gps='git push'
 alias gpsh='git push -u origin `git rev-parse --abbrev-ref HEAD`'
 alias gnb='git nb' # new branch aka checkout -b
 alias grs='git reset'
-alias grshead='git reset HEAD'
 alias grsh='git reset --hard'
 alias gcln='git clean'
 alias gclndf='git clean -df'
@@ -208,12 +210,4 @@ alias dbmd='spring rake db:migrate:down'
 alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
-alias brewu='brew update && brew upgrade --all && brew cleanup && brew prune && brew doctor'
-
-# Directories
-alias vwp='cd ~/Sites/vagrant-local'
-alias projects='cd ~/Projects'
-alias forks='cd ~/Projects/Forks'
-
-# Variables
-alias ep='echo $PATH | tr -s ":" "\n"'
+alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
