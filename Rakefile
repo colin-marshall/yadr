@@ -276,6 +276,9 @@ def install_prezto
   puts
   puts "Overriding prezto ~/.zlogin with YADR's zlogin"
   run %{ ln -nfs "$HOME/.yadr/zsh/prezto-override/zlogin" "${ZDOTDIR:-$HOME}/.zlogin" }
+  puts
+  puts "Overriding prezto ~/.zshrc with YADR's zshrc"
+  run %{ ln -nfs "$HOME/.yadr/zsh/prezto-override/zshrc" "${ZDOTDIR:-$HOME}/.zshrc" }
   
   puts
   puts "Creating directories for your customizations"
