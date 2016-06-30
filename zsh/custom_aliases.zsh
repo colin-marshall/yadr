@@ -12,6 +12,9 @@ alias aliases='cd ~/.yadr && subl zsh/aliases.zsh'
 # OS X Commands
 alias flush-dns-cache='sudo killall -HUP mDNSResponder'
 
+# SSH Connections
+alias ssh-buzz='ssh buzzreco@s6.fcomet.com -p 17177'
+
 # Variables
 alias ep='echo $PATH | tr -s ":" "\n"'
 
