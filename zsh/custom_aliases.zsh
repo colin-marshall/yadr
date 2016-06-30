@@ -9,5 +9,10 @@ alias forks='cd ~/Projects/Forks'
 alias dotfiles='cd ~/.yadr && subl .'
 alias aliases='cd ~/.yadr && subl zsh/aliases.zsh'
 
+# OS X Commands
+alias flush-dns-cache='sudo killall -HUP mDNSResponder'
+
 # Variables
 alias ep='echo $PATH | tr -s ":" "\n"'
+
+
