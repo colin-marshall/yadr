@@ -52,6 +52,14 @@ function prompt_paradox_build_prompt {
     prompt_paradox_start_segment green black '${(e)git_info[ref]}${(e)git_info[status]}'
   fi
 
+  if [[ -n "$node_info" ]]; then
+    prompt_paradox_start_segment yellow black 'node-${(e)node_info[version]}'
+  fi
+
+  if [[ -n "$ruby_info" ]]; then
+    prompt_paradox_start_segment red black '${(e)ruby_info[version]}'
+  fi
+
   prompt_paradox_end_segment
 }
 
@@ -63,7 +71,7 @@ function prompt_paradox_pwd {
     unset MATCH
   else
     #_prompt_paradox_pwd="${${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}//\%/%%}/${${pwd:t}//\%/%%}"
-    _prompt_paradox_pwd="%5~"
+    _prompt_paradox_pwd="%3~"
   fi
 }
 
@@ -103,15 +111,11 @@ function prompt_paradox_precmd {
     ruby-info
   fi
 
-  # Get Virtual env info
-  if (( $+functions[python-info] )); then
-    python-info
-  fi
-
   # Get Node info
   if (( $+functions[node-info] )); then
     node-info
   fi
+
 
   # Calculate and print the elapsed time.
   prompt_paradox_print_elapsed_time
@@ -160,19 +164,16 @@ function prompt_paradox_setup {
     'status' '%s%D%A%B%S%a%d%m%r%U%u'
 
   # Set ruby-info parameters.
-  zstyle ':prezto:module:ruby:info:version' format '%F{red}rb:%v%f'
-
-  # Set python-info parameters.
-  zstyle ':prezto:module:python:info:virtualenv' format '%F{220}py:%v%f'
+  zstyle ':prezto:module:ruby:info:version' format '%v%f'
 
   # Set node-info parameters
-  zstyle ':prezto:module:node:info:version' format '%F{106}node:%v%f'
+  zstyle ':prezto:module:node:info:version' format '%v%f'
 
   # Define prompts.
   PROMPT='
 ${(e)$(prompt_paradox_build_prompt)}
  ${editor_info[keymap]} '
-  RPROMPT='%F{blue}[%F{green}%D{%H:%M:%S}%F{blue}]%f ${ruby_info[version]} ${node_info[version]} ${python_info[virtualenv]}'
+  RPROMPT='%F{blue}[%F{green}%D{%H:%M:%S}%F{blue}]%f'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
