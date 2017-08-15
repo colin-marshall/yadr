@@ -7,6 +7,7 @@ alias vvv='cd ~/Sites/vvv'
 # Vagrant
 alias vup='vagrant up'
 alias vsus='vagrant suspend'
+alias vssh='vagrant ssh'
 
 # Clean and reinstall commands
 alias blowout-node='rm -rf node_modules && npm cache verify && npm install'
