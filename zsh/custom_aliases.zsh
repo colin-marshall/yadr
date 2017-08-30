@@ -17,6 +17,7 @@ alias flush-dns-cache='sudo killall -HUP mDNSResponder'
 
 # SSH Connections
 alias ssh-buzz='ssh buzzreco@s6.fcomet.com -p 17177'
+alias bigmountain='ssh cmwebdev@72.14.187.173'
 
 # Variables
 alias ep='echo $PATH | tr -s ":" "\n"'
