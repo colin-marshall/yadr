@@ -19,4 +19,7 @@ export NVM_DIR="/Users/colinmarshall/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Homebrew PHP CLI
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+# export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+
+# Load Pear
+export PATH="/Users/colinmarshall/pear/bin:$PATH"
