@@ -23,3 +23,11 @@ export NVM_DIR="/Users/colinmarshall/.nvm"
 
 # Load Pear
 export PATH="/Users/colinmarshall/pear/bin:$PATH"
+
+#
+eval "$(hub alias -s)"
+# tabtab source for npm-sync package
+# uninstall by removing these lines or running `tabtab uninstall npm-sync`
+# [[ -f /Users/colinmarshall/.nvm/versions/node/v8.4.0/lib/node_modules/npm-modules-sync/node_modules/tabtab/.completions/npm-sync.zsh ]] && . /Users/colinmarshall/.nvm/versions/node/v8.4.0/lib/node_modules/npm-modules-sync/node_modules/tabtab/.completions/npm-sync.zsh
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
