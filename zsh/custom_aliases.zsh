@@ -22,6 +22,9 @@ alias aliases='cd ~/.yadr && subl zsh/aliases.zsh'
 # OS X Commands
 alias flush-dns-cache='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 
+# alias flush-dns-cache='sudo killall -HUP mDNSResponder'
+alias awake='pmset -g assertions | egrep "(PreventUserIdleSystemSleep|PreventUserIdleDisplaySleep)"'
+
 # SSH Connections
 alias ssh-buzz='ssh buzzreco@s6.fcomet.com -p 17177'
 alias bigmountain='ssh cmwebdev@72.14.187.173'
